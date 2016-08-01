@@ -1,0 +1,60 @@
+<html>
+<head>
+<title><h3>My First Exercise</h3></title>
+</head>
+<body>
+</body>
+<script>
+var myChoice = prompt("Do you choose rock, paper or scissors?");
+var computerChoice = Math.floor(Math.random() *3);
+
+var compare = function(choice1, choice2) {
+	
+    if((choice1 === "rock" && choice2===0) ||(choice1 === "paper" && choice2===1) ||(choice1 === "scissors" && choice2===2)) {
+    return( "The result is a tie!");
+				}
+if(choice1 === "rock") 
+{
+    if(choice2 === "2") 
+	{
+       return( "rock wins");
+    	} else {
+        return("paper wins");
+   	 }
+}
+if(choice1 === "paper") 
+{
+    if(choice2 === "1") 
+	{
+       return("paper wins");
+    } 
+else {
+        if(choice2 === "2") {
+           return("scissors wins");}
+    }
+}
+
+if(choice1 === "scissors")
+ {
+    if(choice2 === "0") 
+	{
+        return("rock wins");
+    } else 
+	{
+        if(choice2 === "1") {
+            return("scissors wins");
+        	}
+    	}
+}
+
+
+};
+
+
+alert("User Choice: " + myChoice);
+alert("Computer Choice: " + computerChoice);
+alert(compare(myChoice, computerChoice));
+
+</script>
+
+
