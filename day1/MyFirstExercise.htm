@@ -9,51 +9,52 @@ var myChoice = prompt("Do you choose rock, paper or scissors?");
 var computerChoice = Math.floor(Math.random() *3);
 
 var compare = function(choice1, choice2) {
-	
     if((choice1 === "rock" && choice2===0) ||(choice1 === "paper" && choice2===1) ||(choice1 === "scissors" && choice2===2)) {
     return( "The result is a tie!");
-				}
+}
 if(choice1 === "rock") 
 {
-    if(choice2 === "2") 
-	{
+    if(choice2 == "2"){
        return( "rock wins");
-    	} else {
-        return("paper wins");
-   	 }
-}
-if(choice1 === "paper") 
-{
-    if(choice2 === "1") 
-	{
+    } else {
        return("paper wins");
-    } 
-else {
-        if(choice2 === "2") {
-           return("scissors wins");}
+    }
+}
+if(choice1 === "paper"){
+    if(choice2 == "0"){ 
+	return("paper wins");
+    }else {
+        if(choice2 == "2") {
+         return("scissors wins");
+	}
     }
 }
 
-if(choice1 === "scissors")
- {
-    if(choice2 === "0") 
-	{
+if(choice1 === "scissors"){	
+    if(choice2 == "0"){	
         return("rock wins");
-    } else 
-	{
-        if(choice2 === "1") {
+    }else {
+        if(choice2 == "1") {
             return("scissors wins");
         	}
     	}
 }
 
-
+choice1="";
+choice2="";
 };
-
 
 alert("User Choice: " + myChoice);
 alert("Computer Choice: " + computerChoice);
-alert(compare(myChoice, computerChoice));
+if (myChoice != 'undefined'){
+if(myChoice === "rock" || myChoice === "paper" || myChoice === "scissors"){
+	alert(compare(myChoice, computerChoice));
+}else{
+alert("You are entering"+" "+ myChoice+" "+"please enter right choice");
+}
+}else{
+alert("You are entering"+" "+ myChoice+" "+"please enter right choice");
+}
 
 </script>
 
